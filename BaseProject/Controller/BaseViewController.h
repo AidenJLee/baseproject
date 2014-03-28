@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AFAPIClient.h"
+#import "BaseConsts.h"
 
 @interface BaseViewController : UIViewController
 

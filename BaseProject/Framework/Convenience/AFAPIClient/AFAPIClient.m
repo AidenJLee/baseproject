@@ -7,6 +7,7 @@
 //
 
 #import "AFAPIClient.h"
+#import "BaseConsts.h"
 
 @implementation AFAPIClient
 
