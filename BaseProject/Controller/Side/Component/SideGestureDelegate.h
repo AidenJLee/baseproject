@@ -15,13 +15,14 @@ typedef NS_ENUM(NSInteger, SideState) {
 
 @protocol SideGestureDelegate <NSObject>
 @optional
-- (void)didMoveSideViewForDirection:(SideState)direction;
+- (void)didSlidingWithDirection:(SideState)direction;
 @end
 
-@interface SideGestureDelegate : NSObject
+
+@interface SideGestureDelegate : NSObject <UIGestureRecognizerDelegate>
 
 @property (nonatomic) BOOL enabled;
-@property (nonatomic) SideState slidingState;
+@property (nonatomic) SideState sideState;
 @property (nonatomic, weak) id <SideGestureDelegate> delegate;
 
 #pragma mark -
