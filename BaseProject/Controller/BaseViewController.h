@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseViewController.h
 //  BaseProject
 //
 //  Created by AidenLee on 2014. 3. 28..
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFAPIClient.h"
 
-@interface ViewController : UIViewController
+@interface BaseViewController : UIViewController
 
 @end
