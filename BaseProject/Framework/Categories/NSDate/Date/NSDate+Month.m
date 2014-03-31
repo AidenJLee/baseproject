@@ -33,14 +33,14 @@
 
 - (NSDate *)dateBySettingMonth:(NSInteger)month
 {
-    NSDateComponents *components = [self componentsDateTime];
+    NSDateComponents *components = [self componentsDate];
     components.month = month;
     return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
 }
 
 - (NSDate *)dateByAddingMonth:(NSInteger)month
 {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
+    NSDateComponents *components = [self componentsDate];
     components.month = month;
     return [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:components toDate:self options:0];
 }

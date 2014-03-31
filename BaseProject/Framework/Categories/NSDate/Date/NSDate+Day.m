@@ -18,26 +18,22 @@
 
 - (NSDate *)dateToday
 {
-    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
     NSDateComponents *components = [self componentsDate];
-    return [calendar dateFromComponents:components];
+    return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
 }
 
 - (NSDate *)dateBySettingDay:(NSInteger)day
 {
-    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
     NSDateComponents *components = [self componentsDate];
     components.day = day;
-    return [calendar dateFromComponents:components];
+    return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
 }
 
 - (NSDate *)dateByAddingDays:(NSInteger)days
 {
-    NSDateComponents *components = [self componentsDate];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
     components.day = days;
-    return [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:components
-                                                                     toDate:self
-                                                                    options:kNilOptions];
+    return [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:components toDate:self options:0];
 }
 
 @end

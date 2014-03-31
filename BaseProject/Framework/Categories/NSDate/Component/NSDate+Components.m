@@ -27,40 +27,40 @@ const NSUInteger flagsWeekTime   = (NSCalendarUnitMonth | NSCalendarUnitWeekOfMo
 
 - (NSDateComponents *)componentsDate
 {
-    return [[NSCalendar autoupdatingCurrentCalendar] components:flagsDate
-                                                       fromDate:self];
+    return [[NSCalendar currentCalendar] components:flagsDate
+                                           fromDate:self];
 }
 
 - (NSDateComponents *)componentsDateTime
 {
-    return [[NSCalendar autoupdatingCurrentCalendar] components:flagsDateTime
-                                                       fromDate:self];
+    return [[NSCalendar currentCalendar] components:flagsDateTime
+                                           fromDate:self];
 }
 
 - (NSDateComponents *)componentsWeek
 {
-    return [[NSCalendar autoupdatingCurrentCalendar] components:flagsWeek
-                                                       fromDate:self];
+    return [[NSCalendar currentCalendar] components:flagsWeek
+                                           fromDate:self];
 }
 
 - (NSDateComponents *)componentsWeekday
 {
-    return [[NSCalendar autoupdatingCurrentCalendar] components:flagsWeekTime
-                                                       fromDate:self];
+    return [[NSCalendar currentCalendar] components:flagsWeekTime
+                                           fromDate:self];
 }
 
 - (NSDateComponents *)componentsWeekTime
 {
-    return [[NSCalendar autoupdatingCurrentCalendar] components:flagsWeekTime
-                                                       fromDate:self];
+    return [[NSCalendar currentCalendar] components:flagsWeekTime
+                                           fromDate:self];
 }
 
 - (NSDateComponents *)componentsWithFlags:(NSUInteger)flags fromSelfToDate:(NSDate *)date
 {
-    return [[NSCalendar autoupdatingCurrentCalendar] components:flags
-                                                       fromDate:self
-                                                         toDate:date
-                                                        options:kNilOptions];
+    return [[NSCalendar currentCalendar] components:flags
+                                           fromDate:self
+                                             toDate:date
+                                            options:kNilOptions];
 }
 
 @end

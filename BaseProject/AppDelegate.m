@@ -7,12 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "NSDateHelper.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    NSDate *now = [NSDate dateWithTimeIntervalSinceNow:-1];
+    NSDate *add7days = [now dateByAddingDays:7];
+    NSLog(@"now  : %@ " , [NSDate date]);
+    NSLog(@"now -1  : %@ " , now);
+    NSLog(@"add Date : %@ " , add7days);
+    NSLog(@"Compare Second : %ld " , (long)[add7days compareSecondToDate:[NSDate date]]);
+    NSLog(@"Compare Second : %ld " , (long)[add7days compareSecondToDate:now]);
+    NSLog(@"Compare Day : %ld " , (long)[add7days compareDayToDate:[NSDate date]]);
+    NSLog(@"Compare Day : %ld " , (long)[add7days compareDayToDate:now]);
+    NSLog(@"Compare : %ld " , (long)[add7days compareHourToDate:[NSDate date]]);
+    
     return YES;
 }
 							
